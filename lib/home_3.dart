@@ -23,7 +23,7 @@ class Home3 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    color: Colors.green,
+                    color: Colors.blue,
                     width: constraints.maxWidth,
                     height: constraints.maxHeight * .08,
                     child: Center(
@@ -42,28 +42,33 @@ class Home3 extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Stack(
+                          fit: StackFit.passthrough,
                           alignment: Alignment.topCenter,
                           children: [
                             Image.asset(
                               'assets/headphones.png',
                               height: 280,
+                              width: 500,
                               fit: BoxFit.cover,
                             ),
-                            Container(
-                              height: 140,
-                              width: 140,
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Colors.black,
-                                  width: 5,
+                            Positioned(
+                              top: size.height * .09,
+                              child: Container(
+                                height: 190,
+                                width: 190,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.blueGrey,
+                                    width: 15,
+                                  ),
+                                  borderRadius: BorderRadius.circular(100),
                                 ),
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(100),
-                                child: Image.asset(
-                                  'assets/locucao.png',
-                                  height: 140,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.asset(
+                                    'assets/locucao.png',
+                                    height: 190,
+                                  ),
                                 ),
                               ),
                             ),
@@ -73,7 +78,7 @@ class Home3 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    color: Colors.deepPurpleAccent,
+                    color: Colors.blue,
                     width: constraints.maxWidth,
                     height: constraints.maxHeight * .12,
                     child: Column(
@@ -87,7 +92,7 @@ class Home3 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    color: Colors.orangeAccent,
+                    color: Colors.blue,
                     width: constraints.maxWidth,
                     height: constraints.maxHeight * .4,
                     child: Center(child: Text('${constraints.maxHeight}')),
